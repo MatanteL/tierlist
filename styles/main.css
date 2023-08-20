@@ -1,0 +1,242 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family:'Arial Narrow', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rating_form{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.rating{
+    display: grid;
+    grid-template-columns: repeat(2, 125px);
+}
+
+
+.category_rating{
+    display: flex;
+    flex-flow: row;
+}
+
+.radio_button_input{
+    display: flex;
+    flex-flow: column;  
+}
+
+.hidden{
+    display: none;
+}
+
+.tier_list{
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    grid-template-rows: repeat(8, auto);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.tier_grid{
+display: flex;
+flex-flow: row wrap;
+padding: 10px;
+border-left: 2px solid black;
+border-bottom: 1px solid black;
+border-right: 2px solid black;
+border-top: 1px solid black;
+}
+
+.game{
+    height: 125px;
+    width: 125px;
+    border: 5px solid;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    margin: 5px;
+}
+
+.game_image{
+    background: url(../assets/images/IRWF_logo.png);  
+       background-size: contain;
+       grid-column: 1/7;
+       grid-row: 1/7;
+       position: relative;
+       border-bottom: 5px solid #D96859;
+       border-right:  5px solid #D96859;
+   }
+
+.rating{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height:30px;
+    width:30px;
+    background: #D96859;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.icons{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    padding: 2px;
+    grid-column: 7/-1;
+    grid-row: 1/7;
+    border-bottom: 5px solid #D96859;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon{
+    grid-row: span 1;
+    width: 25px;
+}
+
+.game_name{
+display: flex;
+  justify-content: center;  
+  font-size: 0.65rem;
+  grid-column: 1/-1;
+  grid-row: 7/-1;
+  padding: 5px;
+  font-weight: bold;
+  line-height: 100%;
+
+}
+p{
+    margin: 0;
+}
+
+
+
+.tier_letter_div{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid black;
+border-bottom: 1px solid black;
+border-top: 1px solid black;
+font-size: 4rem;
+font-weight: bold;
+}
+
+
+
+#s-plus-tier-letter-div{
+    background-color: #D96859;
+}
+
+#s-plus-tier{
+    background-color: rgba(217,104,89,0.2);
+}
+
+#s-plus-tier-game{
+    border-color:#D96859;
+    background-color: rgba(217,104,89,0.2);
+}
+
+#s-tier-letter-div{
+    background-color: #F88096;
+}
+
+#s-tier{
+    background-color: rgba(248,128,150,0.2);
+}
+
+#s-tier-game{
+    border-color:#F88096;
+    background-color: rgba(248,128,150,0.2);
+}
+
+#a-tier-letter-div{
+    background-color: #FE964A;
+}
+
+#a-tier{
+    background-color: rgba(254,150,74,0.2);
+}
+
+#a-tier-game{
+    border-color:#FE964A;
+    background-color: rgba(254,150,74,0.2);
+}
+
+#b-tier-letter-div{
+    background-color: #FAD200;
+}
+
+#b-tier{
+    background-color: rgba(250,210,0,0.2);
+}
+
+#b-tier-game{
+    border-color:#FAD200;
+    background-color: rgba(250,210,0,0.2);
+}
+
+#c-tier-letter-div{
+    background-color: #29D10E;
+}
+
+#c-tier{
+    background-color: rgba(41,209,14,0.2);
+}
+
+#c-tier-game{
+    border-color:#29D10E;
+    background-color: rgba(41,209,14,0.2);
+}
+
+#d-tier-letter-div{
+    background-color: #1BFFFF;
+}
+
+#d-tier{
+    background-color: rgba(27,255,255,0.2);
+}
+
+#d-tier-game{
+    border-color:#1BFFFF;
+    background-color: rgba(27,255,255,0.2);
+}
+
+#e-tier-letter-div{
+    background-color: #A680F8;
+}
+
+#e-tier{
+    background-color: rgba(166,128,248,0.2);
+}
+
+#e-tier-game{
+    border-color:#A680F8;
+    background-color: rgba(166,128,248,0.2);
+}
+
+#f-tier-letter-div{
+    background-color: #F880E4;
+}
+
+#f-tier{
+    background-color: rgba(248,128,228,0.2);
+}
+
+#f-tier-game{
+    border-color:#F880E4;
+    background-color: rgba(248,128,228,0.2);
+}
+

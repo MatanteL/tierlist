@@ -1,0 +1,10 @@
+Terminal git bash
+ls: voir les dossiers et fichiers
+mkdir: créer un dossiers
+touch: créer fichier
+clear: vide le Terminal
+php [nom du fichier]: exécuter le programme php sur le fichier
+
+
+
+path: variable d'environnement
