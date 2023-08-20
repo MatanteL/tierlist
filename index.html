@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tier List de Matante</title>
+
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+ <!--
+<script>
+        function add(value){
+            var lol;
+            document.getElementById('');
+        }
+    </script>
+ -->   
+
+</head>
+<body>
+
+<section class="tier_list" id="tier-list">
+    
+    <div class="tier_letter_div" id="s-plus-tier-letter-div">
+        <p class="tier_letter" id="s-plus-tier-letter">S<sup>+</sup></p>
+    </div>
+    <div class="tier_grid" id="s-plus-tier">
+        <div class="game" id="s-plus-tier-game">
+            <div class="game_image">
+                <div class="rating">100</div>
+            </div>
+            <div class="icons">
+                <img src="./assets/icons/childhood_favorite.svg" alt="" class="icon" >
+                <img src="./assets/icons/played_long_ago.svg" alt="" class="icon">
+                <img src="./assets/icons/completed.svg" alt="" class="icon">
+            </div>
+            <div class="game_name">
+                <p>Teenage Mutant Ninja Turtles IV: Turtles in Time</p>
+            </div>
+        </div>
+        <div class="game" id="s-plus-tier-game" draggable="true"></div>
+        <div class="game" id="s-plus-tier-game" draggable="true"></div>
+
+
+    </div>
+    
+    <div class="tier_letter_div" id="s-tier-letter-div">
+        <p class="tier_letter" id="s-tier-letter">S</p>
+    </div>
+    <div class="tier_grid" id="s-tier">
+        <div class="game" id="s-tier-game" draggable="true"></div>
+
+    </div>
+
+    <div class="tier_letter_div" id="a-tier-letter-div">
+        <p class="tier_letter" id="a-tier-letter">A</p>
+    </div>
+    <div class="tier_grid" id="a-tier">
+        <div class="game" id="a-tier-game" draggable="true"></div>
+
+    </div>
+
+    <div class="tier_letter_div" id="b-tier-letter-div">
+        <p class="tier_letter" id="b-tier-letter">B</p>
+    </div>
+    <div class="tier_grid" id="b-tier">
+        <div class="game" id="b-tier-game" draggable="true"></div>
+
+    </div>
+
+    <div class="tier_letter_div" id="c-tier-letter-div">
+        <p class="tier_letter" id="c-tier-letter">C</p>
+    </div>
+    <div class="tier_grid" id="c-tier">
+        <div class="game" id="c-tier-game" draggable="true"></div>
+
+    </div>
+
+    <div class="tier_letter_div" id="d-tier-letter-div">
+        <p class="tier_letter" id="d-tier-letter">D</p>
+    </div>
+    <div class="tier_grid" id="d-tier">
+        <div class="game" id="d-tier-game" draggable="true"></div>
+
+    </div>
+
+    <div class="tier_letter_div" id="e-tier-letter-div">
+        <p class="tier_letter" id="e-tier-letter">E</p>
+    </div>
+    <div class="tier_grid" id="e-tier">
+        <div class="game" id="e-tier-game" draggable="true"></div>
+
+    </div>
+
+    <div class="tier_letter_div" id="f-tier-letter-div">
+        <p class="tier_letter" id="f-tier-letter">F</p>
+    </div>
+    <div class="tier_grid" id="f-tier">
+        <div class="game" id="f-tier-game" draggable="true"></div>
+    </div>
+
+</section>
+
+
+
+
+
+    <form class="hidden" action="process-form.php" method="post" id="game-info-form">
+        <textarea name="message" rows="1" cols="30" name="game-name">Name</textarea>
+        
+        <label for="image">Image</label>
+        <input type="file" name="image" id="image" accept="image/*"/>
+
+        <label for="platform">Platform</label>
+        <select name="platform" id="platform">
+                <option value="arcade">Arcade</option>
+                <option value="pc">PC</option>
+                <option value="mobile">Mobile</option>
+                <option value="nes">Nintendo Entertainment System</option>
+                <option value="snes">Super Nintendo Entertainment System</option>
+                <option value="n64">Nintendo 64</option>
+                <option value="ngc">Nintendo Gamecube</option>
+                <option value="wii">Nintendo Wii</option>
+                <option value="wii-u">Nintendo Wii U</option>
+                <option value="nsw">Nintendo Switch</option>
+                <option value="gb">Gameboy</option>
+                <option value="gbc">Gameboy Color</option>
+                <option value="gba">Gameboy Advance</option>
+                <option value="nds">Nintendo DS</option>
+                <option value="3ds">Nintendo 3DS</option>
+                <option value="n3ds">New Nintendo 3DS</option>
+                <option value="ps1">PlayStation 1</option>
+                <option value="ps2">PlayStation 2</option>
+                <option value="ps3">PlayStation 3</option>
+                <option value="ps4">PlayStation 4</option>
+                <option value="ps5">PlayStation 5</option>
+                <option value="xbox">Xbox</option>
+                <option value="xbox-360">Xbox 360</option>
+                <option value="xbox-one">Xbox One</option>
+                <option value="xbox-series">Xbox Series X/S</option>
+                <option value="sms">Sega Master System</option>
+                <option value="sg">Sega Genesis</option>
+                <option value="scd">Sega CD</option>
+                <option value="ss">Sega Saturn</option>
+                <option value="sd">Sega Dreamcast</option>
+                <option value="gg">Sega Game Gear</option>
+        </select>
+
+        <!--Did you play this as a child section-->
+        <div class="radio_button_input" id="childhood-form">
+            <p>Did you play this game as a child?</p>
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="childhood-radio" id="childhood-radio-childhood-favorite" value="Yes, and I loved it">
+                <label for="childhood-radio">Yes, and I loved it</label>
+            </div>
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="childhood-radio" id="childhood-radio-childhood-had" value="Yes">
+                <label for="childhood-radio">Yes</label>       
+            </div>
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="childhood-radio" id="childhood-radio-childhood-hated" value="Yes, and I hated it">
+                <label for="childhood-radio">Yes, and I hated it</label>    
+            </div>            
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="childhood-radio" id="childhood-radio-childhood-not" value="No">
+                <label for="childhood-radio">No</label>
+            </div>
+        </div>
+
+        <!--When did you last Did you play this as a child section-->
+        <div class="radio_button_input" id="last-played-form">
+            <p>When did you last play this game?</p>
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="last-played-radio" id="last-played-this-year" value="This year">
+                <label for="last-played-radio">This year</label>    
+            </div>   
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="last-played-radio" id="last-played-years-ago" value="About X years ago">
+                <label for="last-played-radio">About <input type="number" id="years-ago-played" name="years-ago-played" min="1" max="25"> years ago</label>    
+            </div>   
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="last-played-radio" id="last-played-dont-remember" value="I don't remember">
+                <label for="last-played-radio">I don't remember</label>    
+            </div>   
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="last-played-radio" id="last-played-only-seen" value="I've only seen it be played">
+                <label for="last-played-radio">I've only seen it be played</label>    
+            </div>   
+
+            <!--For how long have you played the game section-->
+            <div class="radio_button_input" id="how-long-form">
+                <p>For how long have you played this game?</p>
+                <p>About <input type="number" id="time-played" name="time-played" min="1" max="9999"> hour(s)</p>    
+            </div>                 
+        </div>
+
+        <div class="custom_ul" id="highlights-list">
+            <p>What are this game's highlights?</p>
+            <input type="text" class="add_list_item_text_input" id="txtVal" maxlength="150">
+            <button class="add_list_item_button" id="add-li-button" onclick="addLi(this)" >Add</button>
+            <ul class="custom_list" id="list">
+                <li>1</li>
+                <li>22</li>
+                <li>50</li>
+            </ul>
+        </div>
+
+        <div class="custom_ul" id="flaws-list">
+            <p>What are this game's flaws?</p>
+            <input type="text" class="add_list_item_text_input" id="txtVal" maxlength="150">
+            <button class="add_list_item_button"  onclick="addLi(this)">Add</button>
+            <ul class="custom_list" id="list">
+                <li>1</li>
+                <li>22</li>
+                <li>50</li>
+            </ul>
+        </div>
+
+
+        <!--Would you like to numerically rate the game section-->
+        <div class="radio_button_input" id="enable-rating-form">
+            <p>How would you like to numerically rate the game?</p>
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="enable-rating-radio" id="enable-rating-simple" value="simple">
+                <label for="enable-rating-radio">Give simple numerical rating</label>    
+            </div>   
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="enable-rating-radio" id="enable-rating-detail" value="detailed">
+                <label for="enable-rating-radio">Use detailed rating tool</label>    
+            </div>   
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="enable-rating-radio" id="enable-rating-custom" value="custom">
+                <label for="enable-rating-radio">Use custom rating tool</label>    
+            </div>   
+            <div class="radio_option">
+                <input type="radio" class="radio_button" name="enable-rating-radio" id="enable-rating-no" value="no">
+                <label for="enable-rating-radio">I do not want to rate the game numerically</label>    
+            </div>   
+
+        
+        <!--Rating form-->
+        <div class="rating_form is_hidden" id="rating-form">
+
+            <!--Style rating section-->
+            <div class="rating_category_form" id="style-rating-form">
+                <div class="rating" id="graphics-rating-form">
+                    <label for="rating">Graphics</label>
+                    <input type="number" class="rating_slider" id="graphics-rating-slider" name="graphics-rating" min="0" max="10" onmouseup="add(this.value)">
+
+                </div>
+                <div class="rating" id="user_interface_rating_form">
+                    <label for="rating">User Interface</label>
+                    <input type="number" class="rating_slider" id="user-interface-rating-slider" name="user-interface-rating" min="0" max="10" onmouseup="add(this.value)">
+            
+                </div>
+                <div class="rating" id="sound_design_rating_form">
+                    <label for="rating">Sound Design</label>
+                    <input type="number" class="rating_slider" id="sound-design-rating-slider" name="sound-design-rating" min="0" max="10" onmouseup="add(this.value)">
+            
+                </div>
+                <div class="rating" id="music_rating_form">
+                    <label for="rating">Music</label>
+                    <input type="number" class="rating_slider" id="music-rating-slider" name="music-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="style_polish_rating_form">
+                    <label for="rating">Style Polish</label>
+                    <input type="number" class="rating_slider" id="style-polish-rating-slider" name="style-polish-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="style_polish_rating_form">
+                    <label for="rating">Style</label>
+                    <input type="number" class="rating_slider" id="style-rating-slider" name="style-rating" min="0" max="10">
+                </div>       
+            </div>
+              <!--Gameplay rating section-->
+            <div class="rating_category_form" id="gameplay-rating-form">
+                <div class="rating" id="ergonomy-rating-form">
+                    <label for="rating">Ergonomy</label>
+                    <input type="number" class="rating_slider" id="ergonomy-rating-slider" name="ergonomy-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="feedback_rating_form">
+                    <label for="rating">Feedback</label>
+                    <input type="number" class="rating_slider" id="feedback-rating-slider" name="feedback-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="flow_rating_form">
+                    <label for="rating">Flow</label>
+                    <input type="number" class="rating_slider" id="flow-rating-slider" name="flow-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="responsiveness_rating_form">
+                    <label for="rating">Responsiveness</label>
+                    <input type="number" class="rating_slider" id="responsiveness-rating-slider" name="responsiveness-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="gameplay_polish_rating_form">
+                    <label for="rating">Gameplay Polish</label>
+                    <input type="number" class="rating_slider" id="gameplay-polish-rating-slider" name="gameplay-polish-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="gameplay_polish_rating_form">
+                    <label for="rating">Gameplay</label>
+                    <input type="number" class="rating_slider" id="gameplay-rating-slider" name="gameplay-rating" min="0" max="10">
+                </div>         
+            </div>
+            <!--Pacing rating section-->
+            <div class="rating_category_form" id="pacing-rating-form">
+                <div class="rating" id="progression-rating-form">
+                    <label for="rating">Progression</label>
+                    <input type="number" class="rating_slider" id="progression-rating-slider" name="progression-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="interest_curve_rating_form">
+                    <label for="rating">Interest curve</label>
+                    <input type="number" class="rating_slider" id="interest-curve-rating-slider" name="interest-curve-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="variety_rating_form">
+                    <label for="rating">Variety</label>
+                    <input type="number" class="rating_slider" id="variety-rating-slider" name="variety-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="replayability_rating_form">
+                    <label for="rating">Replayability</label>
+                    <input type="number" class="rating_slider" id="replayability-rating-slider" name="replayability-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="pacing_polish_rating_form">
+                    <label for="rating">Pacing Polish</label>
+                    <input type="number" class="rating_slider" id="pacing-polish-rating-slider" name="pacing-polish-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="pacing_polish_rating_form">
+                    <label for="rating">Pacing</label>
+                    <input type="number" class="rating_slider" id="pacing-rating-slider" name="pacing-rating" min="0" max="10">
+                </div>
+            </div>
+            <!--Depth rating section-->
+            <div class="rating_category_form" id="depth-rating-form">
+                <div class="rating" id="customization_rating_form">
+                    <label for="rating">Customization</label>
+                    <input type="number" class="rating_slider" id="customization-rating-slider" name="customization-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="narrative_rating_form">
+                    <label for="rating">Narrative</label>
+                    <input type="number" class="rating_slider" id="narrative-rating-slider" name="narrative-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="characterization_rating_form">
+                    <label for="rating">Characterization</label>
+                    <input type="number" class="rating_slider" id="characterization-rating-slider" name="characterization-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="extra_content_rating_form">
+                    <label for="rating">Extra content</label>
+                    <input type="number" class="rating_slider" id="extra-content-rating-slider" name="extra-content-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="depth_polish_rating_form">
+                    <label for="rating">Depth Polish</label>
+                    <input type="number" class="rating_slider" id="depth-polish-rating-slider" name="depth-polish-rating" min="0" max="10" onmouseup="add(this.value)">
+                </div>
+                <div class="rating" id="depth_polish_rating_form">
+                    <label for="rating">Depth</label>
+                    <input type="number" class="rating_slider" id="depth-polish-rating-slider" name="depth-rating" min="0" max="10">
+                </div>
+            </div>
+        </div>
+        <button>Update entry</button>
+    </form>
+
+    <template id="tpl-modal-game-info">
+
+    </template>
+
+    <template id="tpl-game">
+        <div class="game" id="s-plus-tier-game">
+            <div class="game_image">
+                <div class="rating">100</div>
+            </div>
+            <div class="icons">
+                <img src="./assets/icons/childhood-favorite.svg" alt="" class="icon" >
+                <img src="./assets/icons/played-long-ago.svg" alt="" class="icon">
+                <img src="./assets/icons/finished-completed.svg" alt="" class="icon">
+            </div>
+            <div class="game_name">
+                <p>Teenage Mutant Ninja Turtles IV: Turtles in Time</p>
+            </div>
+        </div>
+
+    </template>
+</body>
+</html>
